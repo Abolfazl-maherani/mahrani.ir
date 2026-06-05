@@ -1,5 +1,6 @@
 <!doctype html>
-<html x-data="{concatToBaseUrl}" lang="fa" dir="rtl">
+<html x-data="
+    {concatToBaseUrl}" lang="fa" dir="rtl">
 <head>
     <link rel="icon" href="https://mahrani.ir/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="https://mahrani.ir/apple-touch-icon.png">
@@ -13,26 +14,24 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ابوالفضل ماهرانی - رزومه کاری</title>
-    <meta name="og:title" content="ابوالفضل ماهرانی - رزومه کاری">
+    <!-- جایگزین کردن تگ‌های دسکریپشن و توییتر برای سئوی بهتر -->
+    <title>ابوالفضل ماهرانی - توسعه‌دهنده ارشد فرانت‌اند</title>
+    <meta name="description"
+          content="ابوالفضل ماهرانی، توسعه‌دهنده ارشد فرانت‌اند (Senior Frontend Developer) با تخصص عمیق در Vue.js، Nuxt.js و اکوسیستم‌های مدرن وب. خلق رابط‌های کاربری بهینه و معماری کد علاقه‌ی من است.">
+    <meta name="og:description"
+          content="ابوالفضل ماهرانی، توسعه‌دهنده ارشد فرانت‌اند (Senior Frontend Developer) با تخصص عمیق در Vue.js، Nuxt.js و اکوسیستم‌های مدرن وب.">
+    <meta name="twitter:description"
+          content="ابوالفضل ماهرانی، توسعه‌دهنده ارشد فرانت‌اند (Senior Frontend Developer) با تخصص عمیق در Vue.js، Nuxt.js و اکوسیستم‌های مدرن وب.">
+
+    <meta name="og:title" content="ابوالفضل ماهرانی - توسعه‌دهنده ارشد فرانت‌اند">
     <link rel="canonical" href="https://mahrani.ir">
-    <meta name="twitter:title" content="ابوالفضل ماهرانی - رزومه کاری">
-    <meta name="twitter:description" content="ابوالفضل ماهرانی هستم ساکن اصفهان،
-              مدتی هست که سرو کله میزنم با باگ ها و چالش های برنامه نویسی حقیقتش دیگه جزوی از زندگیم شده که دارم باهاش عشق میکنم
- راستی من برنامه نویس فرانت اند هستم و vue.js
-            کار میکنم اگر خواستی بیشتر باهام آشنا شی رزومم رو دانلود کن یا بهم ایمیل بزن.">
+    <meta name="twitter:title" content="ابوالفضل ماهرانی - توسعه‌دهنده ارشد فرانت‌اند">
+    <meta name="twitter:description"
+          content="ابوالفضل ماهرانی، توسعه‌دهنده ارشد فرانت‌اند (Senior Frontend Developer) و تیم لید با تخصص عمیق در Vue.js، Nuxt.js و اکوسیستم‌های مدرن وب.">
 
     <meta name="twitter:image" content="https://mahrani.ir/assets/images/me.JPG">
 
     <meta property="og:type" content="website">
-    <meta name="og:description" content="ابوالفضل ماهرانی هستم ساکن اصفهان،
-              مدتی هست که سرو کله میزنم با باگ ها و چالش های برنامه نویسی حقیقتش دیگه جزوی از زندگیم شده که دارم باهاش عشق میکنم
- راستی من برنامه نویس فرانت اند هستم و vue.js
-            کار میکنم اگر خواستی بیشتر باهام آشنا شی رزومم رو دانلود کن یا بهم ایمیل بزن.">
-    <meta name="description" content="ابوالفضل ماهرانی هستم ساکن اصفهان،
-              مدتی هست که سرو کله میزنم با باگ ها و چالش های برنامه نویسی حقیقتش دیگه جزوی از زندگیم شده که دارم باهاش عشق میکنم
- راستی من برنامه نویس فرانت اند هستم و vue.js
-            کار میکنم اگر خواستی بیشتر باهام آشنا شی رزومم رو دانلود کن یا بهم ایمیل بزن.">
     <meta name="og:image" content="https://mahrani.ir/assets/images/me.JPG">
     <meta name="google-site-verification" content="Tb5IKlmUdGVS2yOHiTNfDUSxHq1WsYey2oyK-aMpN3I"/>
     <meta name="robots" content="index, follow">
@@ -63,31 +62,37 @@
         <div class="flex flex-wrap md:flex-nowrap items-start gap-[10px]">
             <aside class="md:sticky md:top-[55px] shadow-custom-1 rounded-[30px] md:basis-3/12 w-full md:max-w-[25%] ">
                 <div class="flex flex-col bg-white justify-center rounded-t-[30px] p-8 items-center">
-                    <div class="md:-mt-[65px]">
-                        <img class="rounded-[30px] max-h-[150px] " src="https://mahrani.ir/assets/images/me.JPG"
-                             alt="ابوالفضل ماهرانی - رزومه کاری">
+
+                    <div class="relative w-[180px] h-[180px] mx-auto">
+                        <img class="w-full h-full object-cover rounded-[30px]" src="assets/images/me.JPG" alt="ابوالفضل ماهرانی">
+
+                        <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 w-max z-10">
+                            <div class="flex items-center justify-center gap-2 px-4 py-1.5 bg-primary text-white rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.15)] ring-4 ring-white">
+                                <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-white"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                    </span>
+                                <span class="text-[12px] font-bold tracking-wider font-yekan mt-[1px]">OPEN TO WORK</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="text-center mt-8 flex flex-col items-center justify-center w-full">
-                        <h1 class="text-[20px] text-[#444] font-bold">ابوالفضل ماهرانی</h1>
-                        <h2 class="bg-[#F5F6F7] text-[13px] my-1 text-[#44566C] rounded-[30px] px-[8px] py-[4px]"> فرانت
-                            اند دولوپر</h2>
-                        <div class="flex mt-3 items-center gap-2">
-                            <a target="_blank" href="">
-                                <img class="w-[25px]" src="assets/icons/line-md--instagram.svg"
-                                     alt="ابوالفضل ماهرانی - اینستاگرام">
-
+                        <h1 class="text-[20px] text-[#444] font-bold tracking-tight">ابوالفضل ماهرانی</h1>
+                        <h2 class="bg-[#F5F6F7] text-[13px] my-2 text-[#44566C] rounded-[30px] px-[12px] py-[4px] font-medium">
+                            توسعه‌دهنده ارشد فرانت‌اند
+                        </h2>
+                        <div class="flex mt-4 items-center gap-3">
+                            <a target="_blank" rel="noopener noreferrer" href="#" aria-label="اینستاگرام ابوالفضل ماهرانی" class="hover:scale-110 hover:opacity-80 transition-all duration-200">
+                                <img class="w-[25px] h-[25px]" src="assets/icons/line-md--instagram.svg" alt="اینستاگرام ابوالفضل ماهرانی">
                             </a>
-                            <a target="_blank" href="https://www.linkedin.com/in/dev-abolfazl/">
-                                <img class="w-[25px]" src="assets/icons/line-md--linkedin.svg"
-                                     alt="ابوالفضل ماهرانی - لینکدین">
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/dev-abolfazl/" aria-label="لینکدین ابوالفضل ماهرانی" class="hover:scale-110 hover:opacity-80 transition-all duration-200">
+                                <img class="w-[25px] h-[25px]" src="assets/icons/line-md--linkedin.svg" alt="لینکدین ابوالفضل ماهرانی">
                             </a>
-                            <a target="_blank" href="https://github.com/Abolfazl-maherani">
-                                <img class="w-[25px]" src="assets/icons/line-md--github.svg"
-                                     alt="ابوالفضل ماهرانی - گیت هاب">
+                            <a target="_blank" rel="noopener noreferrer" href="https://github.com/Abolfazl-maherani" aria-label="گیت‌هاب ابوالفضل ماهرانی" class="hover:scale-110 hover:opacity-80 transition-all duration-200">
+                                <img class="w-[25px] h-[25px]" src="assets/icons/line-md--github.svg" alt="گیت‌هاب ابوالفضل ماهرانی">
                             </a>
-                            <a target="_blank" href="https://stackoverflow.com/users/18058354/abolfazl-maherani">
-                                <img class="w-[25px]" src="assets/icons/mdi--stackoverflow.svg"
-                                     alt="ابوالفضل ماهرانی - استک آورفلو">
+                            <a target="_blank" rel="noopener noreferrer" href="https://stackoverflow.com/users/18058354/abolfazl-maherani" aria-label="استک‌اورفلو ابوالفضل ماهرانی" class="hover:scale-110 hover:opacity-80 transition-all duration-200">
+                                <img class="w-[25px] h-[25px]" src="assets/icons/mdi--stackoverflow.svg" alt="استک‌آورفلو ابوالفضل ماهرانی">
                             </a>
                         </div>
                     </div>
@@ -132,33 +137,36 @@
                         </div>
                     </template>
                     <!--                    https://drive.google.com/uc?export=download&id=1S4zNhHn2WlsOKHHFGEJJtd2wZjOVRYfS-->
-<!--                    <a href="#" download-->
-<!--                       class="bg-primary shadow-button mt-8 rounded-[8px] p-2 w-full text-white flex items-center justify-center gap-2">-->
-<!--                        <span class="font-bold">دریافت رزومه</span>-->
-<!--                        <img class="w-[30px]" src="assets/icons/line-md&#45;&#45;download-loop.svg"-->
-<!--                             alt="دانلود رزومه ابوالفضل ماهرانی">-->
+                    <!--                    <a href="#" download-->
+                    <!--                       class="bg-primary shadow-button mt-8 rounded-[8px] p-2 w-full text-white flex items-center justify-center gap-2">-->
+                    <!--                        <span class="font-bold">دریافت رزومه</span>-->
+                    <!--                        <img class="w-[30px]" src="assets/icons/line-md&#45;&#45;download-loop.svg"-->
+                    <!--                             alt="دانلود رزومه ابوالفضل ماهرانی">-->
 
-<!--                    </a>-->
+                    <!--                    </a>-->
                 </div>
             </aside>
             <div class="shadow-custom-1 bg-white  rounded-[30px] md:basis-9/12 w-full md:max-w-[75%]">
                 <div class="p-8">
                     <div class="inline-block title-box">
+
                         <h3 class="text-[20px] text-[#444] leading-normal font-bold">درباره ی من</h3>
                         <span class="inline-block w-1/2 h-[4px] bg-primary rounded-lg"></span>
                     </div>
-                    <p class="text-justify leading-loose		">
+                    <p class="text-justify leading-loose">
                         درود فراوان.
                         <br>
-                        ابوالفضل ماهرانی هستم ساکن اصفهان،
-                        مدتی هست که سرو کله میزنم با باگ ها و چالش های برنامه نویسی حقیقتش دیگه جزوی از زندگیم شده که
-                        دارم باهاش عشق
-                        میکنم
+                        من <b>ابوالفضل ماهرانی</b> هستم؛ مهندس نرم‌افزار و توسعه‌دهنده ارشد فرانت‌اند. تفکر مهندسی، حل
+                        مسائل پیچیده، بهینه‌سازی پرفورمنس پروژه‌ها و طراحی معماری‌های مقیاس‌پذیر در دنیای وب، بخش اصلی
+                        کیت تخصصی من را تشکیل می‌دهند.
                         <br>
-                        راستی من برنامه نویس فرانت اند هستم و vue.js
-                        کار میکنم اگر خواستی بیشتر باهام آشنا شی رزومم رو دانلود کن یا بهم ایمیل بزن.
+                        تمرکز ویژه من روی توسعه زیرساخت‌های کلاینت با <b>Vue.js (Composition API)</b> و <b>Nuxt.js</b>
+                        است. در کنار آن، به واسطه تسلط بر مفاهیم شبکه، محیط‌های لینوکسی و داکر، کدهای فرانت‌اند را با
+                        دیدگاهی جامع نسبت به کل زیرساخت و سیستم مهندسی می‌کنم.
                         <br>
-                        <b>ممنون از نگاهت❤️</b>
+                        همواره مشتاق مواجهه با چالش‌های بزرگ فنی و پیاده‌سازی راه‌حل‌های مدرن در تیم‌های پویا هستم.
+                        <br>
+                        <b>ممنون از نگاهتون❤️</b>
                     </p>
                 </div>
                 <div class="p-8 bg-[#f5f8f9]">
@@ -337,7 +345,7 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Abolfazl maherani | ابوالفضل ماهرانی",
-        "jobTitle": "Frontend developer | فرانت اند دولوپر",
+        "jobTitle": "Senior Frontend Developer | سنیور فرانت اند دولوپر",
         "worksFor": {
             "@type": "Organization",
             "name": "Your Company"
@@ -346,7 +354,7 @@
             "@type": "EducationalOrganization",
             "name": "Islamic Azad University Najafabad"
         },
-        "description": "توسعه‌دهنده فرانت‌اند با آشنایی عمیق با ابزارها و تکنولوژی‌های مدرن، به ویژه Vue.js. توانایی من در طراحی و پیاده‌سازی رابط‌های کاربری پیشرفته و واکنش‌گرا، و بهینه‌سازی عملکرد وب‌سایت‌ها باعث می‌شود که تجربه کاربری برجسته‌ای را ارائه دهم. با تجربه گسترده در پیاده‌سازی پروژه‌های پیچیده و همکاری با تیم‌های مختلف، به دنبال استفاده از بهترین روش‌ها و تکنیک‌ها در توسعه وب هستم.",
+        "description": "Software Engineer & Senior Frontend Developer specializing in Vue.js and Nuxt.js",
         "skills": [
             "Vue.js",
             "HTML",
