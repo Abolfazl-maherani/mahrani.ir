@@ -1,0 +1,12 @@
+html,body{
+    font-family: Yekan Bakh FaNum;
+    font-size: 14px;
+    direction: rtl;
+    color:#7A7A7A
+}
+.ltr{
+    direction: ltr;
+}
+.title-box{
+    margin-bottom: 10px;
+}
