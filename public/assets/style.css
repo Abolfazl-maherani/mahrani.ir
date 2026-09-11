@@ -4,6 +4,10 @@ html,body{
     direction: rtl;
     color:#7A7A7A
 }
+html[dir="ltr"], html[dir="ltr"] body{
+    direction: ltr;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
 .ltr{
     direction: ltr;
 }
@@ -41,10 +45,35 @@ html,body{
     box-shadow: 0 0 0 1px rgba(48, 76, 253, 0.12), 0 8px 20px rgba(48, 76, 253, 0.08);
 }
 
+.lang-switch{
+    display: flex;
+    width: 100%;
+    padding: 4px;
+    border-radius: 999px;
+    background: #F5F6F7;
+}
+.lang-switch button{
+    flex: 1;
+    border: 0;
+    border-radius: 999px;
+    padding: 6px 0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    color: #44566C;
+    background: transparent;
+    cursor: pointer;
+}
+.lang-switch button.is-active{
+    background: #fff;
+    color: #304CFD;
+    box-shadow: 0 1px 4px rgba(103, 118, 128, 0.18);
+}
+
 .recruiter-badge{
     position: absolute;
     top: 10px;
-    left: 10px;
+    inset-inline-end: 10px;
     z-index: 2;
     font-size: 11px;
     font-weight: 700;

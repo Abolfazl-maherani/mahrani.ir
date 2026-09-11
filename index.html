@@ -34,7 +34,19 @@
     <meta name="og:image" content="https://mahrani.ir/assets/images/me.JPG">
     <meta name="google-site-verification" content="Tb5IKlmUdGVS2yOHiTNfDUSxHq1WsYey2oyK-aMpN3I"/>
     <meta name="robots" content="index, follow">
-    <script defer src="/js/recruiter-mode.js?__v=2"></script>
+    <script>
+        (function () {
+            try {
+                var fromUrl = new URLSearchParams(location.search).get("lang");
+                var lang = fromUrl || localStorage.getItem("mahrani-lang");
+                if (lang === "en") {
+                    document.documentElement.lang = "en";
+                    document.documentElement.dir = "ltr";
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script defer src="/js/recruiter-mode.js?__v=3"></script>
     <script src="/js/alipine.min.js" defer></script>
     <script src="/js/tailwind.3.4.5.js"></script>
     <meta http-equiv="Cache-Control" content="public">
@@ -50,13 +62,13 @@
     <script src="/js/tailwind.js?__v=2"></script>
     <script defer src="/js/js.js?__v=2"></script>
     <link href="/font/yakanBakh/fontiran.css" rel="stylesheet">
-    <link href="/assets/style.css?__v=2" rel="stylesheet">
+    <link href="/assets/style.css?__v=3" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="MobileOptimized" content="320"/>
 
 
 </head>
-<body class="bg-[#F5F6F7]">
+<body class="bg-[#F5F6F7]" x-data>
 <section class="md:my-[100px] mt-[20px]">
     <div class="container">
         <div class="flex flex-wrap md:flex-nowrap items-start gap-[10px]">
@@ -77,8 +89,8 @@
                         </div>
                     </div>
                     <div class="text-center mt-8 flex flex-col items-center justify-center w-full">
-                        <h1 class="text-[20px] text-[#444] font-bold tracking-tight">ابوالفضل ماهرانی</h1>
-                        <h2 class="bg-[#F5F6F7] text-[13px] my-2 text-[#44566C] rounded-[30px] px-[12px] py-[4px] font-medium">
+                        <h1 class="text-[20px] text-[#444] font-bold tracking-tight" x-text="$store.locale.t($store.locale.copy.name)">ابوالفضل ماهرانی</h1>
+                        <h2 class="bg-[#F5F6F7] text-[13px] my-2 text-[#44566C] rounded-[30px] px-[12px] py-[4px] font-medium" x-text="$store.locale.t($store.locale.copy.jobTitle)">
                             توسعه‌دهنده ارشد فرانت‌اند
                         </h2>
                         <div class="flex mt-4 items-center gap-3">
@@ -94,6 +106,10 @@
                             <a target="_blank" rel="noopener noreferrer" href="https://stackoverflow.com/users/18058354/abolfazl-maherani" aria-label="استک‌اورفلو ابوالفضل ماهرانی" class="hover:scale-110 hover:opacity-80 transition-all duration-200">
                                 <img class="w-[25px] h-[25px]" src="assets/icons/mdi--stackoverflow.svg" alt="استک‌آورفلو ابوالفضل ماهرانی">
                             </a>
+                        </div>
+                        <div class="lang-switch mt-6">
+                            <button type="button" @click="$store.locale.set('fa')" :class="$store.locale.lang === 'fa' ? 'is-active' : ''">FA</button>
+                            <button type="button" @click="$store.locale.set('en')" :class="$store.locale.lang === 'en' ? 'is-active' : ''">EN</button>
                         </div>
                     </div>
                 </div>
@@ -113,13 +129,11 @@
                         },
                         {
                             icon:'mdi--location.svg',
-                            value:'اصفهان، ایران'
-
+                            copyKey:'location'
                         },
                         {
                             icon:'uil--calender.svg',
-                            value:'15 اردیبهشت 1381'
-
+                            copyKey:'birthday'
                         }
                     ]
 
@@ -132,7 +146,7 @@
                                    x-text="item.value"></a>
                             </template>
                             <template x-if="!item?.href">
-                                <span :class="item?.class" x-text="item.value"></span>
+                                <span :class="item?.class" x-text="$store.locale.t($store.locale.copy[item.copyKey])"></span>
                             </template>
                         </div>
                     </template>
@@ -150,33 +164,19 @@
                 <div class="p-8">
                     <div class="inline-block title-box">
 
-                        <h3 class="text-[20px] text-[#444] leading-normal font-bold">درباره ی من</h3>
+                        <h3 class="text-[20px] text-[#444] leading-normal font-bold" x-text="$store.locale.t($store.locale.copy.aboutTitle)">درباره ی من</h3>
                         <span class="inline-block w-1/2 h-[4px] bg-primary rounded-lg"></span>
                     </div>
-                    <p class="text-justify leading-loose">
-                        درود فراوان.
-                        <br>
-                        من <b>ابوالفضل ماهرانی</b> هستم؛ مهندس نرم‌افزار و توسعه‌دهنده ارشد فرانت‌اند. تفکر مهندسی، حل
-                        مسائل پیچیده، بهینه‌سازی پرفورمنس پروژه‌ها و طراحی معماری‌های مقیاس‌پذیر در دنیای وب، بخش اصلی
-                        کیت تخصصی من را تشکیل می‌دهند.
-                        <br>
-                        تمرکز ویژه من روی توسعه زیرساخت‌های کلاینت با <b>Vue.js (Composition API)</b> و <b>Nuxt.js</b>
-                        است. در کنار آن، به واسطه تسلط بر مفاهیم شبکه، محیط‌های لینوکسی و داکر، کدهای فرانت‌اند را با
-                        دیدگاهی جامع نسبت به کل زیرساخت و سیستم مهندسی می‌کنم.
-                        <br>
-                        همواره مشتاق مواجهه با چالش‌های بزرگ فنی و پیاده‌سازی راه‌حل‌های مدرن در تیم‌های پویا هستم.
-                        <br>
-                        <b>ممنون از نگاهتون❤️</b>
-                    </p>
+                    <p class="text-justify leading-loose" x-html="$store.locale.t($store.locale.copy.about)"></p>
                 </div>
 
                 <div class="px-8 pb-8">
                     <div class="recruiter-cta rounded-[20px] border border-[#E8ECF3] bg-[#F8F9FB] p-6">
                         <div class="inline-block title-box mb-3">
-                            <h3 class="text-[18px] text-[#444] leading-normal font-bold">دنبال چه نوع برنامه‌نویسی هستید؟</h3>
+                            <h3 class="text-[18px] text-[#444] leading-normal font-bold" x-text="$store.locale.t($store.locale.copy.recruiterTitle)">دنبال چه نوع برنامه‌نویسی هستید؟</h3>
                             <span class="inline-block w-1/2 h-[4px] bg-primary rounded-lg"></span>
                         </div>
-                        <p class="text-[13px] text-[#7A7A7A] mb-4 leading-relaxed">
+                        <p class="text-[13px] text-[#7A7A7A] mb-4 leading-relaxed" x-text="$store.locale.t($store.locale.copy.recruiterHint)">
                             نقش مورد نظرتان را انتخاب کنید تا مهارت‌ها، تجربه‌ها و پروژه‌های مرتبط در اولویت نمایش داده شوند.
                         </p>
                         <div class="flex flex-wrap gap-2">
@@ -186,7 +186,7 @@
                                     @click="setRole(item.id)"
                                     class="recruiter-chip"
                                     :class="role === item.id ? 'recruiter-chip--active' : ''"
-                                    x-text="item.label"
+                                    x-text="t(item.label)"
                                 ></button>
                             </template>
                         </div>
@@ -195,7 +195,7 @@
 
                 <div class="p-8 bg-[#f5f8f9]">
                     <div class="inline-block title-box">
-                        <h3 class="text-[20px] text-[#444] leading-normal font-bold">مهارت‌های مرتبط</h3>
+                        <h3 class="text-[20px] text-[#444] leading-normal font-bold" x-text="$store.locale.t($store.locale.copy.skillsTitle)">مهارت‌های مرتبط</h3>
                         <span class="inline-block w-1/2 h-[4px] bg-primary rounded-lg"></span>
                     </div>
                     <div class="grid md:grid-cols-3 grid-cols-3 md:items-start gap-3">
@@ -204,7 +204,7 @@
                                 class="bg-white flex flex-col md:flex-row gap-4 justify-center items-center md:items-start md:justify-start rounded-[14px] p-6 relative"
                                 :class="isRelevant(item) ? 'recruiter-card--relevant' : ''"
                             >
-                                <span x-show="isRelevant(item)" class="recruiter-badge">مرتبط</span>
+                                <span x-show="isRelevant(item)" class="recruiter-badge" x-text="t($store.locale.copy.relevant)">مرتبط</span>
                                 <div class="shrink-0">
                                     <img class="md:w-[30px] w-[20px]" :src="`assets/icons/${item.icon}`"
                                          :alt="item.title">
@@ -214,13 +214,13 @@
                                     <div class="relative hidden md:block">
                                         <p x-bind:style="{maxHeight: !item.showMore ? '100px' : '100%'}"
                                            class=" overflow-hidden  text-[#7a7a7a] text-[12px] leading-loose"
-                                           x-text="item.value"></p>
+                                           x-text="t(item.value)"></p>
                                         <div x-show="!item.showMore"
-                                             class=" absolute bottom-0 right-0 z-10 h-[90px] w-full bg-gradient-to-t from-white lg:h-[110px]">
+                                             class=" absolute bottom-0 end-0 z-10 h-[90px] w-full bg-gradient-to-t from-white lg:h-[110px]">
                                         </div>
                                         <div :class="item.showMore ? 'static':'absolute'"
-                                             class=" bottom-[-15px] mt-2 w-full flex justify-end  right-0 z-10 ">
-                                            <button x-text=" item.showMore ? 'خلاصه' : 'بیشتر' "
+                                             class=" bottom-[-15px] mt-2 w-full flex justify-end end-0 z-10 ">
+                                            <button x-text="item.showMore ? t($store.locale.copy.less) : t($store.locale.copy.more)"
                                                     @click="toggleSkill(item)"
                                                     class="  text-xs font-bold rounded-lg  text-[#6d80f9]">
                                             </button>
@@ -234,7 +234,7 @@
 
                 <div class="p-8">
                     <div class="inline-block title-box">
-                        <h3 class="text-[20px] text-[#444] leading-normal font-bold">تجربه‌های مرتبط</h3>
+                        <h3 class="text-[20px] text-[#444] leading-normal font-bold" x-text="$store.locale.t($store.locale.copy.experienceTitle)">تجربه‌های مرتبط</h3>
                         <span class="inline-block w-1/2 h-[4px] bg-primary rounded-lg"></span>
                     </div>
                     <div class="flex flex-col gap-4">
@@ -243,15 +243,15 @@
                                 class="rounded-[16px] border border-[#EEF1F6] bg-[#F8F9FB] p-5 relative"
                                 :class="isRelevant(item) ? 'recruiter-card--relevant' : ''"
                             >
-                                <span x-show="isRelevant(item)" class="recruiter-badge">مرتبط</span>
+                                <span x-show="isRelevant(item)" class="recruiter-badge" x-text="$store.locale.t($store.locale.copy.relevant)">مرتبط</span>
                                 <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
                                     <h4 class="text-[16px] text-[#444] font-bold" x-text="item.company"></h4>
-                                    <span class="text-[12px] text-[#8893A4]" x-text="item.period"></span>
+                                    <span class="text-[12px] text-[#8893A4]" x-text="t(item.period)"></span>
                                 </div>
                                 <p class="text-[13px] text-primary font-medium mb-3" x-text="item.role"></p>
-                                <ul class="list-disc pr-5 space-y-1.5">
+                                <ul class="list-disc ps-5 space-y-1.5">
                                     <template x-for="(line, lineIndex) in item.highlights" :key="lineIndex">
-                                        <li class="text-[13px] leading-relaxed text-[#5F6B7A]" x-text="line"></li>
+                                        <li class="text-[13px] leading-relaxed text-[#5F6B7A]" x-text="t(line)"></li>
                                     </template>
                                 </ul>
                             </article>
@@ -261,7 +261,7 @@
 
                 <div class="p-8 bg-[#f5f8f9]">
                     <div class="inline-block title-box">
-                        <h3 class="text-[20px] text-[#444] leading-normal font-bold">پروژه‌های پیشنهادی</h3>
+                        <h3 class="text-[20px] text-[#444] leading-normal font-bold" x-text="$store.locale.t($store.locale.copy.projectsTitle)">پروژه‌های پیشنهادی</h3>
                         <span class="inline-block w-1/2 h-[4px] bg-primary rounded-lg"></span>
                     </div>
                     <div class="grid md:grid-cols-2 grid-cols-1 gap-3">
@@ -270,9 +270,9 @@
                                 class="bg-white rounded-[16px] border border-[#EEF1F6] p-5 relative"
                                 :class="isRelevant(item) ? 'recruiter-card--relevant' : ''"
                             >
-                                <span x-show="isRelevant(item)" class="recruiter-badge">مرتبط</span>
-                                <h4 class="text-[15px] text-[#444] font-bold mb-2" x-text="item.title"></h4>
-                                <p class="text-[13px] leading-relaxed text-[#5F6B7A]" x-text="item.summary"></p>
+                                <span x-show="isRelevant(item)" class="recruiter-badge" x-text="$store.locale.t($store.locale.copy.relevant)">مرتبط</span>
+                                <h4 class="text-[15px] text-[#444] font-bold mb-2" x-text="t(item.title)"></h4>
+                                <p class="text-[13px] leading-relaxed text-[#5F6B7A]" x-text="t(item.summary)"></p>
                             </article>
                         </template>
                     </div>
@@ -280,7 +280,7 @@
 
                 <div class="p-8">
                     <div class="inline-block title-box">
-                        <h3 class="text-[20px] text-[#444] leading-normal font-bold">چه کسانی من رو پیشنهاد میکنند</h3>
+                        <h3 class="text-[20px] text-[#444] leading-normal font-bold" x-text="$store.locale.t($store.locale.copy.recsTitle)">چه کسانی من رو پیشنهاد میکنند</h3>
                         <span class="inline-block w-1/2 h-[4px] bg-primary rounded-lg"></span>
                     </div>
                     <div>
