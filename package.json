@@ -4,11 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "deploy": "node scripts/deploy.js"
   },
   "dependencies": {
     "express": "^4.19.2",
     "live-server": "^1.2.2",
     "sitemap": "^8.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^17.4.2",
+    "ssh2": "^1.17.0"
   }
 }

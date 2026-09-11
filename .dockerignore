@@ -1,0 +1,9 @@
+node_modules
+.git
+.env
+.env.example
+scripts
+repomix-output.xml
+*.md
+.ftpquota
+.htaccess

@@ -1,6 +1,5 @@
 <!doctype html>
-<html x-data="
-    {concatToBaseUrl}" lang="fa" dir="rtl">
+<html lang="fa" dir="rtl">
 <head>
     <link rel="icon" href="https://mahrani.ir/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="https://mahrani.ir/apple-touch-icon.png">
@@ -35,6 +34,7 @@
     <meta name="og:image" content="https://mahrani.ir/assets/images/me.JPG">
     <meta name="google-site-verification" content="Tb5IKlmUdGVS2yOHiTNfDUSxHq1WsYey2oyK-aMpN3I"/>
     <meta name="robots" content="index, follow">
+    <script defer src="/js/recruiter-mode.js?__v=2"></script>
     <script src="/js/alipine.min.js" defer></script>
     <script src="/js/tailwind.3.4.5.js"></script>
     <meta http-equiv="Cache-Control" content="public">
@@ -47,10 +47,10 @@
     />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/js/tailwind.js?__v=1"></script>
-    <script defer src="/js/js.js?__v=1"></script>
+    <script src="/js/tailwind.js?__v=2"></script>
+    <script defer src="/js/js.js?__v=2"></script>
     <link href="/font/yakanBakh/fontiran.css" rel="stylesheet">
-    <link href="/assets/style.css?__v=1" rel="stylesheet">
+    <link href="/assets/style.css?__v=2" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="MobileOptimized" content="320"/>
 
@@ -146,7 +146,7 @@
                     <!--                    </a>-->
                 </div>
             </aside>
-            <div class="shadow-custom-1 bg-white  rounded-[30px] md:basis-9/12 w-full md:max-w-[75%]">
+            <div x-data="recruiterMode" class="shadow-custom-1 bg-white  rounded-[30px] md:basis-9/12 w-full md:max-w-[75%]">
                 <div class="p-8">
                     <div class="inline-block title-box">
 
@@ -169,106 +169,60 @@
                         <b>ممنون از نگاهتون❤️</b>
                     </p>
                 </div>
+
+                <div class="px-8 pb-8">
+                    <div class="recruiter-cta rounded-[20px] border border-[#E8ECF3] bg-[#F8F9FB] p-6">
+                        <div class="inline-block title-box mb-3">
+                            <h3 class="text-[18px] text-[#444] leading-normal font-bold">دنبال چه نوع برنامه‌نویسی هستید؟</h3>
+                            <span class="inline-block w-1/2 h-[4px] bg-primary rounded-lg"></span>
+                        </div>
+                        <p class="text-[13px] text-[#7A7A7A] mb-4 leading-relaxed">
+                            نقش مورد نظرتان را انتخاب کنید تا مهارت‌ها، تجربه‌ها و پروژه‌های مرتبط در اولویت نمایش داده شوند.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <template x-for="item in roles" :key="item.id">
+                                <button
+                                    type="button"
+                                    @click="setRole(item.id)"
+                                    class="recruiter-chip"
+                                    :class="role === item.id ? 'recruiter-chip--active' : ''"
+                                    x-text="item.label"
+                                ></button>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="p-8 bg-[#f5f8f9]">
                     <div class="inline-block title-box">
-                        <h3 class="text-[20px] text-[#444] leading-normal font-bold">چه تکنولوژی هایی کار کردم</h3>
+                        <h3 class="text-[20px] text-[#444] leading-normal font-bold">مهارت‌های مرتبط</h3>
                         <span class="inline-block w-1/2 h-[4px] bg-primary rounded-lg"></span>
                     </div>
-                    <div class="grid md:grid-cols-3 grid-cols-3 md:items-start gap-3" x-data="{
-                    skills:[
-                            {
-                                icon:'skill-icons--html.svg',
-                                value:'اچ‌تی‌ام‌ال۵ جدیدترین نسخه‌ی اچ‌تی‌ام‌ال است که امکانات پیشرفته‌ای را برای ایجاد و نمایش محتوای وب فراهم می‌کند. این نسخه از اچ‌تی‌ام‌ال قابلیت‌های جدیدی مثل پشتیبانی از ویدیو و صدا، گرافیک‌های برداری، فرم‌های پیشرفته، و تعاملات بهبودیافته را به وب‌سایت‌ها اضافه کرده است.',
-                                title:'Html5',
-                                showMore:false
-                            },
-                             {
-                                icon:'skill-icons--css.svg',
-                                value:`سی‌اس‌اس (CSS) یا برگه‌های سبک آبشاری زبانی است که برای طراحی و تنظیم ظاهر صفحات وب استفاده می‌شود. با استفاده از سی‌اس‌اس، می‌توان به راحتی رنگ‌ها، فونت‌ها، چیدمان و دیگر ویژگی‌های بصری عناصر HTML را کنترل کرد و ظاهر سایت را به شکل دلخواه درآورد. `,
-                                title:'Css3',
-                                showMore:false
-                            },
-                             {
-                                icon:'vscode-icons--file-type-js-official.svg',
-                                value:'جاوااسکریپت (JS) یک زبان برنامه‌نویسی است که برای ایجاد تعاملات پویا و واکنش‌گر در صفحات وب استفاده می‌شود. با استفاده از جاوااسکریپت می‌توان عملیات مختلفی مانند کنترل رویدادها، تغییر محتوا بدون نیاز به بارگذاری مجدد صفحه، و ایجاد انیمیشن‌ها و افکت‌های بصری را به صفحات وب اضافه کرد.',
-                                   title:'Javascript',
-                                   showMore:false
-                            },
-                             {
-                                icon:'logos--vue.svg',
-                                value:'ویو (Vue.js) یک فریم‌ورک جاوااسکریپتی سبک و منعطف است که برای ساختن رابط‌های کاربری و اپلیکیشن‌های تک‌صفحه‌ای (SPA) به کار می‌رود. ویو از ساختاری مبتنی بر کامپوننت‌ها استفاده می‌کند که توسعه را ساده و قابل مدیریت می‌کند و به توسعه‌دهندگان اجازه می‌دهد به راحتی بخش‌های مختلف یک اپلیکیشن را به صورت مجزا ایجاد و مدیریت کنند.',
-                                title:'Vue js',
-                                showMore:false
-                            },
-                             {
-                                icon:'vscode-icons--file-type-quasar.svg',
-                                value:'کواسر (Quasar) یک فریم‌ورک مبتنی بر Vue.js است که به توسعه‌دهندگان امکان می‌دهد به راحتی اپلیکیشن‌های وب، موبایل، و دسکتاپ را با استفاده از یک کدبیس واحد ایجاد کنند. کواسر ابزارها و کامپوننت‌های آماده‌ای را ارائه می‌دهد که فرآیند توسعه را سریع‌تر و ساده‌تر می‌کند و به توسعه‌دهندگان اجازه می‌دهد اپلیکیشن‌های رسپانسیو و با عملکرد بالا ایجاد کنند.',
-                                title:'Quasar',
-                                showMore:false
-                            },
-                            {
-                                icon:'logos--pinia.svg',
-                                value:'پینیا (Pinia) یک کتابخانه مدیریت وضعیت (State Management) برای فریم‌ورک Vue.js است که جایگزین Vuex محسوب می‌شود. پینیا ساختاری ساده‌تر و کاربرپسندتر نسبت به Vuex دارد و به توسعه‌دهندگان اجازه می‌دهد وضعیت اپلیکیشن را به صورت مرکزی مدیریت کنند. این کتابخانه از قابلیت‌هایی مانند تایپ‌های قوی‌تر، استفاده آسان‌تر، و بهینه‌سازی‌های بهتر برای اپلیکیشن‌های بزرگ برخوردار است.',
-                                  title:'Pinia',
-                                  showMore:false
-                            },
-                            {
-                                icon:'logos--nuxt-icon.svg',
-                                value:'ناکست (Nuxt.js) یک فریم‌ورک قدرتمند و انعطاف‌پذیر بر پایه Vue.js است که برای ساخت اپلیکیشن‌های وب، به‌ویژه اپلیکیشن‌های رندر سمت سرور (SSR) و سایت‌های استاتیک بهینه شده است. ناکست توسعه‌دهندگان را قادر می‌سازد تا به راحتی ویژگی‌هایی مانند مسیرهای خودکار، مدیریت وضعیت، و احراز هویت را پیاده‌سازی کنند و در عین حال از مزایای سئوی بهتر و عملکرد سریع‌تر برخوردار شوند.',
-                                title:'Nuxt',
-                                showMore:false
-                            },
-                            {
-                                icon:'devicon--vuetify.svg',
-                                value:'ویوتیفای (Vuetify) یک کتابخانه کامپوننت مبتنی بر Vue.js است که از طراحی متریال دیزاین (Material Design) گوگل الهام گرفته شده است. ویوتیفای مجموعه‌ای گسترده از کامپوننت‌های آماده و قابل تنظیم را فراهم می‌کند که توسعه‌دهندگان می‌توانند با استفاده از آن‌ها، رابط‌های کاربری زیبا و واکنش‌گرا را به سرعت ایجاد کنند. این کتابخانه به ویژه برای پروژه‌هایی که نیاز به طراحی سازگار و یکپارچه با متریال دیزاین دارند، بسیار مناسب است.',
-                                title:'Vuetify',
-                                showMore:false
-                            },
-                            {
-                                icon:'logos--axios.svg',
-                                value:'اکسیوس (Axios) یک کتابخانه جاوااسکریپتی سبک و انعطاف‌پذیر است که برای انجام درخواست‌های HTTP از مرورگر یا Node.js استفاده می‌شود. اکسیوس به توسعه‌دهندگان امکان می‌دهد به راحتی داده‌ها را به سرور ارسال یا از آن دریافت کنند و از ویژگی‌هایی مانند درخواست‌های همزمان، مدیریت ساده خطاها، و تنظیمات پیشرفته‌ی هدرها و تایم‌اوت‌ها بهره‌مند شوند. این کتابخانه به خصوص برای کار با API‌ها و ارتباط با سرور در اپلیکیشن‌های وب بسیار محبوب است.',
-                                title:'Axios',
-                                showMore:false
-                            },
-                            {
-                                icon:'gravity-ui--abbr-api.svg',
-                                value:'REST API (رابط برنامه‌نویسی اپلیکیشن بر اساس نمایشی از وضعیت) یک سبک معماری برای طراحی و ساخت وب‌سرویس‌ها است که از پروتکل HTTP برای برقراری ارتباط بین کلاینت و سرور استفاده می‌کند. در REST API، عملیات‌های مختلف مانند خواندن، ایجاد، به‌روزرسانی و حذف منابع با استفاده از متدهای HTTP (GET، POST، PUT، DELETE) انجام می‌شود. این معماری بر اصولی مانند استقلال از پلتفرم، استفاده از URL‌های منحصر به فرد برای منابع، و انتقال داده‌ها به فرمت‌های متداولی مانند JSON یا XML تکیه دارد و به دلیل سادگی و مقیاس‌پذیری، در توسعه وب و موبایل بسیار مورد استفاده قرار می‌گیرد.',
-                                title:'Rest api',
-                                showMore:false
-                            },
-                            {
-                                icon:'uim--telegram-alt.svg',
-                                value:'مینی‌اپ تلگرام یک اپلیکیشن تحت‌وب است که مستقیماً درون پیام‌رسان تلگرام اجرا می‌شود و با استفاده از WebApp API امکان تعامل گرافیکی و پیشرفته‌تری نسبت به ربات‌های معمولی را فراهم می‌کند. این مینی‌اپ‌ها از طریق ربات تلگرام بارگذاری می‌شوند و می‌توانند رابط کاربری مشابه اپلیکیشن‌های موبایل را ارائه دهند، بدون نیاز به نصب یا خروج از تلگرام. اتصال به ربات، احراز هویت، ارسال داده‌ها و کنترل رفتار کاربر، همگی از طریق APIهای رسمی تلگرام انجام می‌شود و این قابلیت را برای توسعه‌دهندگان فراهم می‌کند تا خدمات پیچیده را مستقیماً درون تلگرام ارائه دهند.',
-                                title:'Mini App Telegram',
-                                showMore:false
-                            }
-
-                        ]}">
-                        <template x-data="{ skills:skills, activeExpend:null}" x-for="(item, index) in skills"
-                                  :key="index">
+                    <div class="grid md:grid-cols-3 grid-cols-3 md:items-start gap-3">
+                        <template x-for="item in sortedSkills" :key="item.id">
                             <div
-
-                                    class="bg-white flex flex-col md:flex-row gap-4 justify-center items-center md:items-start md:justify-start rounded-[14px] p-6">
+                                class="bg-white flex flex-col md:flex-row gap-4 justify-center items-center md:items-start md:justify-start rounded-[14px] p-6 relative"
+                                :class="isRelevant(item) ? 'recruiter-card--relevant' : ''"
+                            >
+                                <span x-show="isRelevant(item)" class="recruiter-badge">مرتبط</span>
                                 <div class="shrink-0">
                                     <img class="md:w-[30px] w-[20px]" :src="`assets/icons/${item.icon}`"
                                          :alt="item.title">
                                 </div>
                                 <div>
-                                    <h2 class="text-[15px] truncate	 font-bold" x-text="item.title"></h2>
+                                    <h2 class="text-[15px] truncate font-bold" x-text="item.title"></h2>
                                     <div class="relative hidden md:block">
                                         <p x-bind:style="{maxHeight: !item.showMore ? '100px' : '100%'}"
                                            class=" overflow-hidden  text-[#7a7a7a] text-[12px] leading-loose"
                                            x-text="item.value"></p>
                                         <div x-show="!item.showMore"
                                              class=" absolute bottom-0 right-0 z-10 h-[90px] w-full bg-gradient-to-t from-white lg:h-[110px]">
-
                                         </div>
                                         <div :class="item.showMore ? 'static':'absolute'"
                                              class=" bottom-[-15px] mt-2 w-full flex justify-end  right-0 z-10 ">
                                             <button x-text=" item.showMore ? 'خلاصه' : 'بیشتر' "
-                                                    @click="()=> {activeExpend?.showMore && activeExpend !== item ? activeExpend.showMore = false : null;item.showMore = !item.showMore; activeExpend = item}"
+                                                    @click="toggleSkill(item)"
                                                     class="  text-xs font-bold rounded-lg  text-[#6d80f9]">
-
                                             </button>
                                         </div>
                                     </div>
@@ -276,8 +230,54 @@
                             </div>
                         </template>
                     </div>
-
                 </div>
+
+                <div class="p-8">
+                    <div class="inline-block title-box">
+                        <h3 class="text-[20px] text-[#444] leading-normal font-bold">تجربه‌های مرتبط</h3>
+                        <span class="inline-block w-1/2 h-[4px] bg-primary rounded-lg"></span>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <template x-for="item in sortedExperiences" :key="item.id">
+                            <article
+                                class="rounded-[16px] border border-[#EEF1F6] bg-[#F8F9FB] p-5 relative"
+                                :class="isRelevant(item) ? 'recruiter-card--relevant' : ''"
+                            >
+                                <span x-show="isRelevant(item)" class="recruiter-badge">مرتبط</span>
+                                <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
+                                    <h4 class="text-[16px] text-[#444] font-bold" x-text="item.company"></h4>
+                                    <span class="text-[12px] text-[#8893A4]" x-text="item.period"></span>
+                                </div>
+                                <p class="text-[13px] text-primary font-medium mb-3" x-text="item.role"></p>
+                                <ul class="list-disc pr-5 space-y-1.5">
+                                    <template x-for="(line, lineIndex) in item.highlights" :key="lineIndex">
+                                        <li class="text-[13px] leading-relaxed text-[#5F6B7A]" x-text="line"></li>
+                                    </template>
+                                </ul>
+                            </article>
+                        </template>
+                    </div>
+                </div>
+
+                <div class="p-8 bg-[#f5f8f9]">
+                    <div class="inline-block title-box">
+                        <h3 class="text-[20px] text-[#444] leading-normal font-bold">پروژه‌های پیشنهادی</h3>
+                        <span class="inline-block w-1/2 h-[4px] bg-primary rounded-lg"></span>
+                    </div>
+                    <div class="grid md:grid-cols-2 grid-cols-1 gap-3">
+                        <template x-for="item in sortedProjects" :key="item.id">
+                            <article
+                                class="bg-white rounded-[16px] border border-[#EEF1F6] p-5 relative"
+                                :class="isRelevant(item) ? 'recruiter-card--relevant' : ''"
+                            >
+                                <span x-show="isRelevant(item)" class="recruiter-badge">مرتبط</span>
+                                <h4 class="text-[15px] text-[#444] font-bold mb-2" x-text="item.title"></h4>
+                                <p class="text-[13px] leading-relaxed text-[#5F6B7A]" x-text="item.summary"></p>
+                            </article>
+                        </template>
+                    </div>
+                </div>
+
                 <div class="p-8">
                     <div class="inline-block title-box">
                         <h3 class="text-[20px] text-[#444] leading-normal font-bold">چه کسانی من رو پیشنهاد میکنند</h3>
