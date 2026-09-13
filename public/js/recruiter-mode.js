@@ -6,13 +6,13 @@
 
   const COPY = {
     name: { fa: "ابوالفضل ماهرانی", en: "Abolfazl Maherani" },
-    jobTitle: { fa: "توسعه‌دهنده ارشد فرانت‌اند", en: "Senior Frontend Developer" },
+    jobTitle: { fa: "مهندس نرم‌افزار", en: "Software Engineer" },
     location: { fa: "اصفهان، ایران", en: "Isfahan, Iran" },
     birthday: { fa: "۱۵ اردیبهشت ۱۳۸۱", en: "5 May 2002" },
     aboutTitle: { fa: "درباره ی من", en: "About me" },
     about: {
-      fa: "درود فراوان.<br>من <b>ابوالفضل ماهرانی</b> هستم؛ مهندس نرم‌افزار و توسعه‌دهنده ارشد فرانت‌اند. تفکر مهندسی، حل مسائل پیچیده، بهینه‌سازی پرفورمنس پروژه‌ها و طراحی معماری‌های مقیاس‌پذیر در دنیای وب، بخش اصلی کیت تخصصی من را تشکیل می‌دهند.<br>تمرکز ویژه من روی توسعه زیرساخت‌های کلاینت با <b>Vue.js (Composition API)</b> و <b>Nuxt.js</b> است. در کنار آن، به واسطه تسلط بر مفاهیم شبکه، محیط‌های لینوکسی و داکر، کدهای فرانت‌اند را با دیدگاهی جامع نسبت به کل زیرساخت و سیستم مهندسی می‌کنم.<br>همواره مشتاق مواجهه با چالش‌های بزرگ فنی و پیاده‌سازی راه‌حل‌های مدرن در تیم‌های پویا هستم.<br><b>ممنون از نگاهتون❤️</b>",
-      en: "Hello.<br>I am <b>Abolfazl Maherani</b>, a software engineer and senior frontend developer. Engineering thinking, solving hard problems, performance work, and scalable web architecture are the core of what I do.<br>I focus on client-side systems with <b>Vue.js (Composition API)</b> and <b>Nuxt.js</b>. With a solid background in networking, Linux, and Docker, I build frontend with the rest of the stack in mind.<br>I enjoy hard technical problems and shipping modern solutions in fast-moving teams.<br><b>Thanks for reading.</b>",
+      fa: "درود فراوان.<br>من <b>ابوالفضل ماهرانی</b> هستم؛ <b>مهندس نرم‌افزار</b>. تفکر مهندسی، حل مسائل پیچیده، بهینه‌سازی پرفورمنس پروژه‌ها و طراحی معماری‌های مقیاس‌پذیر در دنیای وب، بخش اصلی کیت تخصصی من را تشکیل می‌دهند.<br>تمرکز ویژه من روی توسعه زیرساخت‌های کلاینت با <b>Vue.js (Composition API)</b> و <b>Nuxt.js</b> است. در کنار آن، به واسطه تسلط بر مفاهیم شبکه، محیط‌های لینوکسی و داکر، کدها را با دیدگاهی جامع نسبت به کل زیرساخت و سیستم مهندسی می‌کنم.<br>همواره مشتاق مواجهه با چالش‌های بزرگ فنی و پیاده‌سازی راه‌حل‌های مدرن در تیم‌های پویا هستم.<br><b>ممنون از نگاهتون❤️</b>",
+      en: "Hello.<br>I am <b>Abolfazl Maherani</b>, a <b>software engineer</b>. Engineering thinking, solving hard problems, performance work, and scalable web architecture are the core of what I do.<br>I focus on client-side systems with <b>Vue.js (Composition API)</b> and <b>Nuxt.js</b>. With a solid background in networking, Linux, and Docker, I build software with the rest of the stack in mind.<br>I enjoy hard technical problems and shipping modern solutions in fast-moving teams.<br><b>Thanks for reading.</b>",
     },
     recruiterTitle: { fa: "دنبال چه نوع برنامه‌نویسی هستید؟", en: "What kind of developer are you hiring?" },
     recruiterHint: {
