@@ -212,10 +212,11 @@
       company: "PayStar",
       url: "https://paystar.ir",
       logo: "assets/images/paystar-logo.png",
-      role: "Frontend Developer",
+      role: { fa: "تیم‌لید فرانت‌اند", en: "Frontend Team Lead" },
       period: { fa: "۱۴۰۳ — اکنون", en: "2024 — Present" },
       tags: ["frontend", "vue", "javascript", "api"],
       highlights: [
+        { fa: "رهبری تیم فرانت‌اند", en: "Led the frontend team" },
         { fa: "توسعه Frontend با Vue 3", en: "Frontend development with Vue 3" },
         { fa: "کار با Composition API", en: "Composition API" },
         { fa: "توسعه فرم‌ها و workflowهای پیچیده", en: "Complex forms and workflows" },
@@ -307,8 +308,8 @@
       href: "https://paystar.ir",
       logo: "assets/images/paystar-logo.png",
       summary: {
-        fa: "توسعه Frontend با Vue 3، فرم‌ها و workflowهای پیچیده، کار با API و state management.",
-        en: "Vue 3 frontend for complex forms and workflows, with API and state management.",
+        fa: "تیم‌لید فرانت‌اند؛ توسعه با Vue 3، فرم‌ها و workflowهای پیچیده، کار با API و state management.",
+        en: "Frontend team lead. Vue 3 for complex forms and workflows, with API and state management.",
       },
       tags: ["frontend", "vue", "javascript", "api"],
     },
