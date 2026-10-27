@@ -11,8 +11,8 @@
     birthday: { fa: "۱۵ اردیبهشت ۱۳۸۱", en: "5 May 2002" },
     aboutTitle: { fa: "درباره ی من", en: "About me" },
     about: {
-      fa: "درود فراوان.<br>من <b>ابوالفضل ماهرانی</b> هستم؛ <b>مهندس نرم‌افزار</b>. تفکر مهندسی، حل مسائل پیچیده، بهینه‌سازی پرفورمنس پروژه‌ها و طراحی معماری‌های مقیاس‌پذیر در دنیای وب، بخش اصلی کیت تخصصی من را تشکیل می‌دهند.<br>تمرکز ویژه من روی توسعه زیرساخت‌های کلاینت با <b>Vue.js (Composition API)</b> و <b>Nuxt.js</b> است. در کنار آن، به واسطه تسلط بر مفاهیم شبکه، محیط‌های لینوکسی و داکر، کدها را با دیدگاهی جامع نسبت به کل زیرساخت و سیستم مهندسی می‌کنم.<br>همواره مشتاق مواجهه با چالش‌های بزرگ فنی و پیاده‌سازی راه‌حل‌های مدرن در تیم‌های پویا هستم.<br><b>ممنون از نگاهتون❤️</b>",
-      en: "Hello.<br>I am <b>Abolfazl Maherani</b>, a <b>software engineer</b>. Engineering thinking, solving hard problems, performance work, and scalable web architecture are the core of what I do.<br>I focus on client-side systems with <b>Vue.js (Composition API)</b> and <b>Nuxt.js</b>. With a solid background in networking, Linux, and Docker, I build software with the rest of the stack in mind.<br>I enjoy hard technical problems and shipping modern solutions in fast-moving teams.<br><b>Thanks for reading.</b>",
+      fa: "درود فراوان.<br>من <b>ابوالفضل ماهرانی</b> هستم؛ <b>مهندس نرم‌افزار</b> و <b>هم‌بنیان‌گذار تایمی</b> (<a href=\"https://timmi.ir\" target=\"_blank\" rel=\"noopener noreferrer\">timmi.ir</a>). تفکر مهندسی، حل مسائل پیچیده، بهینه‌سازی پرفورمنس پروژه‌ها و طراحی معماری‌های مقیاس‌پذیر در دنیای وب، بخش اصلی کیت تخصصی من را تشکیل می‌دهند.<br>تمرکز ویژه من روی توسعه زیرساخت‌های کلاینت با <b>Vue.js (Composition API)</b> و <b>Nuxt.js</b> است. در کنار آن، به واسطه تسلط بر مفاهیم شبکه، محیط‌های لینوکسی و داکر، کدها را با دیدگاهی جامع نسبت به کل زیرساخت و سیستم مهندسی می‌کنم.<br>همواره مشتاق مواجهه با چالش‌های بزرگ فنی و پیاده‌سازی راه‌حل‌های مدرن در تیم‌های پویا هستم.<br><b>ممنون از نگاهتون❤️</b>",
+      en: "Hello.<br>I am <b>Abolfazl Maherani</b>, a <b>software engineer</b> and <b>co-founder of Timmi</b> (<a href=\"https://timmi.ir\" target=\"_blank\" rel=\"noopener noreferrer\">timmi.ir</a>). Engineering thinking, solving hard problems, performance work, and scalable web architecture are the core of what I do.<br>I focus on client-side systems with <b>Vue.js (Composition API)</b> and <b>Nuxt.js</b>. With a solid background in networking, Linux, and Docker, I build software with the rest of the stack in mind.<br>I enjoy hard technical problems and shipping modern solutions in fast-moving teams.<br><b>Thanks for reading.</b>",
     },
     recruiterTitle: { fa: "دنبال چه نوع برنامه‌نویسی هستید؟", en: "What kind of developer are you hiring?" },
     recruiterHint: {
@@ -191,6 +191,20 @@
 
   const EXPERIENCES = [
     {
+      id: "timmi",
+      company: "Timmi",
+      url: "https://timmi.ir",
+      role: { fa: "هم‌بنیان‌گذار", en: "Co-founder" },
+      period: { fa: "۱۴۰۴ — اکنون", en: "2025 — Present" },
+      tags: ["frontend", "vue", "nuxt", "typescript", "fullstack", "api"],
+      highlights: [
+        { fa: "هم‌بنیان‌گذاری timmi.ir؛ پلتفرم جستجو، مقایسه و رزرو آنلاین نوبت", en: "Co-founded timmi.ir, a platform to search, compare, and book appointments" },
+        { fa: "محصول برای کسب‌وکارهای نوبت‌محور، با پروفایل عمومی و پنل مدیریت", en: "Built for appointment-based businesses, with public profiles and an owner dashboard" },
+        { fa: "معماری با Nuxt 4، Vue 3، Pinia، Supabase، SSR و PWA", en: "Architecture on Nuxt 4, Vue 3, Pinia, and Supabase, with SSR and PWA" },
+        { fa: "رزرو نوبت، پرداخت آنلاین، کیف پول، پیامک و سئو", en: "Booking, online payments, wallet, SMS, and SEO" },
+      ],
+    },
+    {
       id: "paystar",
       company: "PayStar",
       role: "Frontend Developer",
@@ -201,19 +215,6 @@
         { fa: "کار با Composition API", en: "Composition API" },
         { fa: "توسعه فرم‌ها و workflowهای پیچیده", en: "Complex forms and workflows" },
         { fa: "کار با API و state management", en: "API integration and state management" },
-      ],
-    },
-    {
-      id: "timmi",
-      company: "Timmi",
-      role: "Frontend / Nuxt Developer",
-      period: { fa: "پروژه تخصصی", en: "Specialist project" },
-      tags: ["frontend", "vue", "nuxt", "api"],
-      highlights: [
-        { fa: "توسعه با Nuxt 4", en: "Built with Nuxt 4" },
-        { fa: "SSR و SEO", en: "SSR and SEO" },
-        { fa: "طراحی معماری Frontend", en: "Frontend architecture" },
-        { fa: "کار با Supabase و API", en: "Supabase and API work" },
       ],
     },
     {
@@ -280,6 +281,16 @@
 
   const PROJECTS = [
     {
+      id: "timmi-project",
+      title: { fa: "Timmi — رزرو نوبت", en: "Timmi — appointment booking" },
+      href: "https://timmi.ir",
+      summary: {
+        fa: "هم‌بنیان‌گذار timmi.ir؛ پلتفرم رزرو نوبت کسب‌وکارهای نوبت‌محور با Nuxt 4، پرداخت آنلاین، کیف پول و پنل کسب‌وکار.",
+        en: "Co-founded timmi.ir, a Nuxt 4 booking platform for appointment-based businesses, with online payments, a wallet, and a business dashboard.",
+      },
+      tags: ["frontend", "vue", "nuxt", "typescript", "fullstack", "api"],
+    },
+    {
       id: "paystar-project",
       title: { fa: "PayStar — پلتفرم پرداخت", en: "PayStar — payment platform" },
       summary: {
@@ -287,15 +298,6 @@
         en: "Vue 3 frontend for complex forms and workflows, with API and state management.",
       },
       tags: ["frontend", "vue", "javascript", "api"],
-    },
-    {
-      id: "timmi-project",
-      title: { fa: "Timmi — اپلیکیشن Nuxt", en: "Timmi — Nuxt app" },
-      summary: {
-        fa: "توسعه با Nuxt 4، SSR و SEO، معماری Frontend و کار با Supabase و API.",
-        en: "Nuxt 4 app with SSR, SEO, frontend architecture, Supabase, and API work.",
-      },
-      tags: ["frontend", "vue", "nuxt", "api"],
     },
     {
       id: "zeeplay-project",
