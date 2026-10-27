@@ -16,11 +16,11 @@
     <!-- جایگزین کردن تگ‌های دسکریپشن و توییتر برای سئوی بهتر -->
     <title>ابوالفضل ماهرانی - مهندس نرم‌افزار</title>
     <meta name="description"
-          content="ابوالفضل ماهرانی، مهندس نرم‌افزار و هم‌بنیان‌گذار تایمی (timmi.ir). تخصص در Vue.js، Nuxt.js و ساخت محصول‌های وب.">
+          content="ابوالفضل ماهرانی، مهندس نرم‌افزار و بنیان‌گذار تایمی (timmi.ir). تخصص در Vue.js، Nuxt.js و ساخت محصول‌های وب.">
     <meta name="og:description"
-          content="ابوالفضل ماهرانی، مهندس نرم‌افزار و هم‌بنیان‌گذار تایمی (timmi.ir). تخصص در Vue.js، Nuxt.js و ساخت محصول‌های وب.">
+          content="ابوالفضل ماهرانی، مهندس نرم‌افزار و بنیان‌گذار تایمی (timmi.ir). تخصص در Vue.js، Nuxt.js و ساخت محصول‌های وب.">
     <meta name="twitter:description"
-          content="ابوالفضل ماهرانی، مهندس نرم‌افزار و هم‌بنیان‌گذار تایمی (timmi.ir). تخصص در Vue.js، Nuxt.js و ساخت محصول‌های وب.">
+          content="ابوالفضل ماهرانی، مهندس نرم‌افزار و بنیان‌گذار تایمی (timmi.ir). تخصص در Vue.js، Nuxt.js و ساخت محصول‌های وب.">
 
     <meta name="og:title" content="ابوالفضل ماهرانی - مهندس نرم‌افزار">
     <link rel="canonical" href="https://mahrani.ir">
@@ -43,7 +43,7 @@
             } catch (e) {}
         })();
     </script>
-    <script defer src="/js/recruiter-mode.js?__v=5"></script>
+    <script defer src="/js/recruiter-mode.js?__v=6"></script>
     <script src="/js/alipine.min.js" defer></script>
     <script src="/js/tailwind.3.4.5.js"></script>
     <meta http-equiv="Cache-Control" content="public">
@@ -59,7 +59,7 @@
     <script src="/js/tailwind.js?__v=2"></script>
     <script defer src="/js/js.js?__v=2"></script>
     <link href="/font/yakanBakh/fontiran.css" rel="stylesheet">
-    <link href="/assets/style.css?__v=3" rel="stylesheet">
+    <link href="/assets/style.css?__v=4" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="MobileOptimized" content="320"/>
 
@@ -237,23 +237,36 @@
                     <div class="flex flex-col gap-4">
                         <template x-for="item in sortedExperiences" :key="item.id">
                             <article
-                                class="rounded-[16px] border border-[#EEF1F6] bg-[#F8F9FB] p-5 relative"
-                                :class="isRelevant(item) ? 'recruiter-card--relevant' : ''"
+                                class="experience-card rounded-[16px] border border-[#EEF1F6] bg-[#F8F9FB] p-5 relative"
+                                :class="[isRelevant(item) ? 'recruiter-card--relevant' : '', item.featured ? 'experience-card--featured' : '']"
                             >
-                                <span x-show="isRelevant(item)" class="recruiter-badge" x-text="$store.locale.t($store.locale.copy.relevant)">مرتبط</span>
-                                <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
-                                    <h4 class="text-[16px] text-[#444] font-bold">
-                                        <a x-show="item.url" :href="item.url" target="_blank" rel="noopener noreferrer" class="hover:text-primary" x-text="item.company"></a>
-                                        <span x-show="!item.url" x-text="item.company"></span>
-                                    </h4>
-                                    <span class="text-[12px] text-[#8893A4]" x-text="t(item.period)"></span>
+                                <div class="experience-card__top">
+                                    <div class="experience-card__brand">
+                                        <img x-show="item.logo" :src="item.logo" alt="" class="experience-card__logo">
+                                        <div class="min-w-0">
+                                            <h4 class="text-[16px] text-[#444] font-bold" x-text="item.company"></h4>
+                                            <p class="text-[13px] text-primary font-medium" x-text="t(item.role)"></p>
+                                        </div>
+                                    </div>
+                                    <div class="experience-card__meta">
+                                        <span x-show="isRelevant(item)" class="recruiter-badge recruiter-badge--inline" x-text="$store.locale.t($store.locale.copy.relevant)">مرتبط</span>
+                                        <span class="experience-card__period" x-text="t(item.period)"></span>
+                                    </div>
                                 </div>
-                                <p class="text-[13px] text-primary font-medium mb-3" x-text="t(item.role)"></p>
                                 <ul class="list-disc ps-5 space-y-1.5">
                                     <template x-for="(line, lineIndex) in item.highlights" :key="lineIndex">
                                         <li class="text-[13px] leading-relaxed text-[#5F6B7A]" x-text="t(line)"></li>
                                     </template>
                                 </ul>
+                                <a
+                                    x-show="item.url"
+                                    :href="item.url"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="experience-link"
+                                >
+                                    <span x-text="item.url ? item.url.replace('https://', '') : ''"></span>
+                                </a>
                             </article>
                         </template>
                     </div>
@@ -271,11 +284,17 @@
                                 :class="isRelevant(item) ? 'recruiter-card--relevant' : ''"
                             >
                                 <span x-show="isRelevant(item)" class="recruiter-badge" x-text="$store.locale.t($store.locale.copy.relevant)">مرتبط</span>
-                                <h4 class="text-[15px] text-[#444] font-bold mb-2">
-                                    <a x-show="item.href" :href="item.href" target="_blank" rel="noopener noreferrer" class="hover:text-primary" x-text="t(item.title)"></a>
-                                    <span x-show="!item.href" x-text="t(item.title)"></span>
-                                </h4>
+                                <img x-show="item.logo" :src="item.logo" alt="" class="experience-card__logo mb-3">
+                                <h4 class="text-[15px] text-[#444] font-bold mb-2" x-text="t(item.title)"></h4>
                                 <p class="text-[13px] leading-relaxed text-[#5F6B7A]" x-text="t(item.summary)"></p>
+                                <a
+                                    x-show="item.href"
+                                    :href="item.href"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="experience-link"
+                                    x-text="item.href ? item.href.replace('https://', '') : ''"
+                                ></a>
                             </article>
                         </template>
                     </div>
@@ -358,7 +377,7 @@
             "@type": "EducationalOrganization",
             "name": "Islamic Azad University Najafabad"
         },
-        "description": "Software Engineer and co-founder of Timmi (timmi.ir), specializing in Vue.js and Nuxt.js",
+        "description": "Software Engineer and founder of Timmi (timmi.ir), specializing in Vue.js and Nuxt.js",
         "skills": [
             "Vue.js",
             "HTML",

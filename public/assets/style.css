@@ -82,3 +82,61 @@ html[dir="ltr"], html[dir="ltr"] body{
     border-radius: 999px;
     padding: 2px 8px;
 }
+.recruiter-badge--inline{
+    position: static;
+    top: auto;
+    inset-inline-end: auto;
+}
+.experience-card__top{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+.experience-card__brand{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+.experience-card__logo{
+    display: block;
+    height: 34px;
+    width: auto;
+    flex-shrink: 0;
+}
+.experience-card__meta{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+    flex-shrink: 0;
+}
+.experience-card__period{
+    font-size: 12px;
+    color: #8893A4;
+    white-space: nowrap;
+}
+.experience-card--featured{
+    background: #fff;
+    border-color: rgba(189, 100, 213, 0.45);
+}
+.experience-link{
+    display: inline-flex;
+    align-items: center;
+    margin-top: 14px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #F4EEF8;
+    color: #3A255A;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    direction: ltr;
+}
+.experience-link:hover{
+    background: #6C4AB6;
+    color: #fff;
+}
