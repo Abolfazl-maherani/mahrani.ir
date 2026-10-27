@@ -43,7 +43,7 @@
             } catch (e) {}
         })();
     </script>
-    <script defer src="/js/recruiter-mode.js?__v=6"></script>
+    <script defer src="/js/recruiter-mode.js?__v=7"></script>
     <script src="/js/alipine.min.js" defer></script>
     <script src="/js/tailwind.3.4.5.js"></script>
     <meta http-equiv="Cache-Control" content="public">
@@ -59,7 +59,7 @@
     <script src="/js/tailwind.js?__v=2"></script>
     <script defer src="/js/js.js?__v=2"></script>
     <link href="/font/yakanBakh/fontiran.css" rel="stylesheet">
-    <link href="/assets/style.css?__v=4" rel="stylesheet">
+    <link href="/assets/style.css?__v=5" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="MobileOptimized" content="320"/>
 
@@ -242,7 +242,7 @@
                             >
                                 <div class="experience-card__top">
                                     <div class="experience-card__brand">
-                                        <img x-show="item.logo" :src="item.logo" alt="" class="experience-card__logo">
+                                        <img x-show="item.logo" :src="item.logo" alt="" class="experience-card__logo" :class="item.logoWide ? 'experience-card__logo--wide' : ''">
                                         <div class="min-w-0">
                                             <h4 class="text-[16px] text-[#444] font-bold" x-text="item.company"></h4>
                                             <p class="text-[13px] text-primary font-medium" x-text="t(item.role)"></p>
@@ -284,7 +284,7 @@
                                 :class="isRelevant(item) ? 'recruiter-card--relevant' : ''"
                             >
                                 <span x-show="isRelevant(item)" class="recruiter-badge" x-text="$store.locale.t($store.locale.copy.relevant)">مرتبط</span>
-                                <img x-show="item.logo" :src="item.logo" alt="" class="experience-card__logo mb-3">
+                                <img x-show="item.logo" :src="item.logo" alt="" class="experience-card__logo mb-3" :class="item.logoWide ? 'experience-card__logo--wide' : ''">
                                 <h4 class="text-[15px] text-[#444] font-bold mb-2" x-text="t(item.title)"></h4>
                                 <p class="text-[13px] leading-relaxed text-[#5F6B7A]" x-text="t(item.summary)"></p>
                                 <a

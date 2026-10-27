@@ -103,9 +103,14 @@ html[dir="ltr"], html[dir="ltr"] body{
 }
 .experience-card__logo{
     display: block;
-    height: 34px;
-    width: auto;
+    height: 36px;
+    width: 36px;
+    object-fit: contain;
     flex-shrink: 0;
+}
+.experience-card__logo--wide{
+    width: auto;
+    max-width: 108px;
 }
 .experience-card__meta{
     display: flex;
@@ -129,14 +134,14 @@ html[dir="ltr"], html[dir="ltr"] body{
     margin-top: 14px;
     padding: 6px 12px;
     border-radius: 999px;
-    background: #F4EEF8;
-    color: #3A255A;
+    background: #EEF1FB;
+    color: #304CFD;
     font-size: 13px;
     font-weight: 700;
     text-decoration: none;
     direction: ltr;
 }
 .experience-link:hover{
-    background: #6C4AB6;
+    background: #304CFD;
     color: #fff;
 }

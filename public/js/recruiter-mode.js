@@ -195,6 +195,7 @@
       company: "Timmi",
       url: "https://timmi.ir",
       logo: "assets/images/timmi-logo.svg",
+      logoWide: true,
       featured: true,
       role: { fa: "بنیان‌گذار", en: "Founder" },
       period: { fa: "۱۴۰۴ — اکنون", en: "2025 — Present" },
@@ -209,6 +210,8 @@
     {
       id: "paystar",
       company: "PayStar",
+      url: "https://paystar.ir",
+      logo: "assets/images/paystar-logo.png",
       role: "Frontend Developer",
       period: { fa: "۱۴۰۳ — اکنون", en: "2024 — Present" },
       tags: ["frontend", "vue", "javascript", "api"],
@@ -234,6 +237,8 @@
     {
       id: "mastertube",
       company: "MasterTube / Omega Do",
+      url: "https://master.tube",
+      logo: "assets/images/mastertube-logo.png",
       role: "Frontend Developer",
       period: { fa: "۱۴۰۲ — ۱۴۰۳", en: "2023 — 2024" },
       tags: ["frontend", "vue", "javascript", "api"],
@@ -246,6 +251,8 @@
     {
       id: "bankseda",
       company: "Bank seda",
+      url: "https://www.bank-seda.com/fa",
+      logo: "assets/images/bankseda-icon.png",
       role: "Frontend Lead Developer",
       period: { fa: "۱۴۰۱ — ۱۴۰۳", en: "2022 — 2024" },
       tags: ["frontend", "vue", "javascript", "api"],
@@ -287,6 +294,7 @@
       title: { fa: "Timmi — رزرو نوبت", en: "Timmi — appointment booking" },
       href: "https://timmi.ir",
       logo: "assets/images/timmi-logo.svg",
+      logoWide: true,
       summary: {
         fa: "بنیان‌گذار timmi.ir؛ پلتفرم رزرو نوبت کسب‌وکارهای نوبت‌محور با Nuxt 4، Postgres، پرداخت آنلاین، کیف پول و پنل کسب‌وکار.",
         en: "Founded timmi.ir, a Nuxt 4 booking platform for appointment-based businesses, with Postgres, online payments, a wallet, and a business dashboard.",
@@ -296,6 +304,8 @@
     {
       id: "paystar-project",
       title: { fa: "PayStar — پلتفرم پرداخت", en: "PayStar — payment platform" },
+      href: "https://paystar.ir",
+      logo: "assets/images/paystar-logo.png",
       summary: {
         fa: "توسعه Frontend با Vue 3، فرم‌ها و workflowهای پیچیده، کار با API و state management.",
         en: "Vue 3 frontend for complex forms and workflows, with API and state management.",
@@ -314,6 +324,8 @@
     {
       id: "mastertube-project",
       title: { fa: "MasterTube — پنل تحلیل یوتیوب", en: "MasterTube — YouTube analytics" },
+      href: "https://master.tube",
+      logo: "assets/images/mastertube-logo.png",
       summary: {
         fa: "پنل کاربر برای آمار کانال، آپلود و بکاپ ویدیو با ساختار ماژولار فرانت‌اند.",
         en: "User panel for channel stats, video upload, and backups, with a modular frontend.",
@@ -323,6 +335,8 @@
     {
       id: "bankseda-project",
       title: { fa: "Bank seda — سفارش صداگذاری", en: "Bank seda — voice-over orders" },
+      href: "https://www.bank-seda.com/fa",
+      logo: "assets/images/bankseda-icon.png",
       summary: {
         fa: "سیستم مدیریت سفارش آنلاین برای خدمات صدا و روایت، با رهبری فرانت‌اند.",
         en: "Online order system for voice and narration services, with frontend leadership.",
