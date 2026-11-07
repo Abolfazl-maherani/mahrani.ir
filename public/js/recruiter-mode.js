@@ -6,13 +6,13 @@
 
   const COPY = {
     name: { fa: "ابوالفضل ماهرانی", en: "Abolfazl Maherani" },
-    jobTitle: { fa: "مهندس نرم‌افزار", en: "Software Engineer" },
+    jobTitle: { fa: "مهندس نرم‌افزار فول‌استک", en: "Full-stack Software Engineer" },
     location: { fa: "اصفهان، ایران", en: "Isfahan, Iran" },
     birthday: { fa: "۱۵ اردیبهشت ۱۳۸۱", en: "5 May 2002" },
     aboutTitle: { fa: "درباره ی من", en: "About me" },
     about: {
-      fa: "درود فراوان.<br>من <b>ابوالفضل ماهرانی</b> هستم؛ <b>مهندس نرم‌افزار</b> و <b>بنیان‌گذار تایمی</b> (<a href=\"https://timmi.ir\" target=\"_blank\" rel=\"noopener noreferrer\">timmi.ir</a>). تفکر مهندسی، حل مسائل پیچیده، بهینه‌سازی پرفورمنس پروژه‌ها و طراحی معماری‌های مقیاس‌پذیر در دنیای وب، بخش اصلی کیت تخصصی من را تشکیل می‌دهند.<br>تمرکز ویژه من روی توسعه زیرساخت‌های کلاینت با <b>Vue.js (Composition API)</b> و <b>Nuxt.js</b> است. در کنار آن، به واسطه تسلط بر مفاهیم شبکه، محیط‌های لینوکسی و داکر، کدها را با دیدگاهی جامع نسبت به کل زیرساخت و سیستم مهندسی می‌کنم.<br>همواره مشتاق مواجهه با چالش‌های بزرگ فنی و پیاده‌سازی راه‌حل‌های مدرن در تیم‌های پویا هستم.<br><b>ممنون از نگاهتون❤️</b>",
-      en: "Hello.<br>I am <b>Abolfazl Maherani</b>, a <b>software engineer</b> and <b>founder of Timmi</b> (<a href=\"https://timmi.ir\" target=\"_blank\" rel=\"noopener noreferrer\">timmi.ir</a>). Engineering thinking, solving hard problems, performance work, and scalable web architecture are the core of what I do.<br>I focus on client-side systems with <b>Vue.js (Composition API)</b> and <b>Nuxt.js</b>. With a solid background in networking, Linux, and Docker, I build software with the rest of the stack in mind.<br>I enjoy hard technical problems and shipping modern solutions in fast-moving teams.<br><b>Thanks for reading.</b>",
+      fa: "درود فراوان.<br>من <b>ابوالفضل ماهرانی</b> هستم؛ <b>مهندس نرم‌افزار فول‌استک</b> و <b>بنیان‌گذار تایمی</b> (<a href=\"https://timmi.ir\" target=\"_blank\" rel=\"noopener noreferrer\">timmi.ir</a>). تفکر مهندسی، حل مسائل پیچیده، بهینه‌سازی پرفورمنس و طراحی معماری‌های مقیاس‌پذیر، هسته کار من است.<br>در فرانت‌اند با <b>Vue.js (Composition API)</b> و <b>Nuxt.js</b> محصول می‌سازم؛ در بک‌اند با <b>Node.js</b>، <b>Express</b>، <b>PostgreSQL</b>، <b>Supabase</b>، <b>Redis</b> و صف‌های <b>BullMQ</b> سرویس‌ها را طراحی و پیاده‌سازی می‌کنم. استقرار روی <b>Linux</b>، <b>Docker</b> و مسیرهای <b>CI/CD</b> هم بخشی از روزمره‌ام است.<br>همواره مشتاق چالش‌های بزرگ فنی و ساخت راه‌حل‌های مدرن در تیم‌های پویا هستم.<br><b>ممنون از نگاهتون❤️</b>",
+      en: "Hello.<br>I am <b>Abolfazl Maherani</b>, a <b>full-stack software engineer</b> and <b>founder of Timmi</b> (<a href=\"https://timmi.ir\" target=\"_blank\" rel=\"noopener noreferrer\">timmi.ir</a>). Engineering thinking, hard problem-solving, performance work, and scalable architecture are the core of what I do.<br>On the client I ship with <b>Vue.js (Composition API)</b> and <b>Nuxt.js</b>. On the server I design APIs and services with <b>Node.js</b>, <b>Express</b>, <b>PostgreSQL</b>, <b>Supabase</b>, <b>Redis</b>, and <b>BullMQ</b> queues — and I deploy them with <b>Linux</b>, <b>Docker</b>, and <b>CI/CD</b>.<br>I enjoy hard technical problems and shipping modern solutions in fast-moving teams.<br><b>Thanks for reading.</b>",
     },
     recruiterTitle: { fa: "دنبال چه نوع برنامه‌نویسی هستید؟", en: "What kind of developer are you hiring?" },
     recruiterHint: {
@@ -29,8 +29,8 @@
   };
 
   const ROLES = [
-    { id: "frontend", label: "Frontend Developer" },
     { id: "fullstack", label: "Full-stack Developer" },
+    { id: "frontend", label: "Frontend Developer" },
     { id: "vue-nuxt", label: "Vue / Nuxt Developer" },
     { id: "all", label: { fa: "مشاهده همه", en: "View all" } },
   ];
@@ -41,8 +41,24 @@
       skillOrder: ["Vue js", "Nuxt", "TypeScript", "Javascript", "Html5", "Css3"],
     },
     fullstack: {
-      preferredTags: ["fullstack", "javascript", "typescript", "vue", "nuxt", "api", "telegram", "backend"],
-      skillOrder: ["Javascript", "TypeScript", "Vue js", "Nuxt", "Axios", "Rest api", "Mini App Telegram"],
+      preferredTags: ["fullstack", "backend", "node", "database", "devops", "api", "javascript", "typescript", "vue", "nuxt"],
+      skillOrder: [
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "Supabase",
+        "Redis",
+        "BullMQ",
+        "Docker",
+        "Rest api",
+        "CI/CD",
+        "Linux",
+        "SQLite",
+        "Nuxt",
+        "Vue js",
+        "TypeScript",
+        "Javascript",
+      ],
     },
     "vue-nuxt": {
       preferredTags: ["vue", "nuxt", "pinia", "quasar", "vuetify", "frontend"],
@@ -169,11 +185,121 @@
       id: "rest-api",
       icon: "gravity-ui--abbr-api.svg",
       title: "Rest api",
-      tags: ["frontend", "fullstack", "api"],
+      tags: ["frontend", "fullstack", "backend", "api"],
       showMore: false,
       value: {
-        fa: "REST API (رابط برنامه‌نویسی اپلیکیشن بر اساس نمایشی از وضعیت) یک سبک معماری برای طراحی و ساخت وب‌سرویس‌ها است که از پروتکل HTTP برای برقراری ارتباط بین کلاینت و سرور استفاده می‌کند. در REST API، عملیات‌های مختلف مانند خواندن، ایجاد، به‌روزرسانی و حذف منابع با استفاده از متدهای HTTP (GET، POST، PUT، DELETE) انجام می‌شود. این معماری بر اصولی مانند استقلال از پلتفرم، استفاده از URL‌های منحصر به فرد برای منابع، و انتقال داده‌ها به فرمت‌های متداولی مانند JSON یا XML تکیه دارد و به دلیل سادگی و مقیاس‌پذیری، در توسعه وب و موبایل بسیار مورد استفاده قرار می‌گیرد.",
-        en: "REST APIs use HTTP methods to read and write resources, typically as JSON. I integrate and design these on both the client and the server.",
+        fa: "REST API سبک معماری برای طراحی وب‌سرویس‌هاست که با متدهای HTTP منابع را می‌خواند و می‌نویسد. من هم در سمت کلاینت با APIها کار می‌کنم و هم در سمت سرور آن‌ها را طراحی و مستند می‌کنم.",
+        en: "REST APIs use HTTP methods to read and write resources, typically as JSON. I design and consume them on both the client and the server.",
+      },
+    },
+    {
+      id: "nodejs",
+      icon: "skill-icons--nodejs.svg",
+      title: "Node.js",
+      tags: ["fullstack", "backend", "node", "javascript"],
+      showMore: false,
+      value: {
+        fa: "Node.js محیط اجرای جاوااسکریپت سمت سرور است. با آن سرویس‌های بک‌اند، اسکریپت‌های tooling و APIهای مقیاس‌پذیر می‌سازم.",
+        en: "Node.js is the JavaScript runtime I use for backend services, tooling, and scalable APIs.",
+      },
+    },
+    {
+      id: "express",
+      icon: "skill-icons--expressjs.svg",
+      title: "Express",
+      tags: ["fullstack", "backend", "node", "api"],
+      showMore: false,
+      value: {
+        fa: "Express فریم‌ورک سبک Node.js برای ساخت REST API، middleware و سرویس‌های HTTP است. برای طراحی endpointها، احراز هویت و لایه کنترلر از آن استفاده می‌کنم.",
+        en: "Express is a lightweight Node.js framework for REST APIs, middleware, and HTTP services.",
+      },
+    },
+    {
+      id: "supabase",
+      icon: "skill-icons--supabase.svg",
+      title: "Supabase",
+      tags: ["fullstack", "backend", "database", "api"],
+      showMore: false,
+      value: {
+        fa: "Supabase پلتفرم بک‌اند مبتنی بر PostgreSQL است با Auth، Realtime، Storage و API آماده. برای ساخت سریع بک‌اند و یکپارچه‌سازی فرانت از آن استفاده می‌کنم.",
+        en: "Supabase is a Postgres-based backend platform with Auth, Realtime, Storage, and ready APIs for shipping full-stack features faster.",
+      },
+    },
+    {
+      id: "postgresql",
+      icon: "skill-icons--postgresql.svg",
+      title: "PostgreSQL",
+      tags: ["fullstack", "backend", "database"],
+      showMore: false,
+      value: {
+        fa: "PostgreSQL دیتابیس رابطه‌ای قدرتمند برای مدل‌سازی داده، queryهای پیچیده و یکپارچگی داده‌هاست. در محصولاتی مثل تایمی از آن به‌عنوان منبع اصلی داده استفاده می‌کنم.",
+        en: "PostgreSQL is my go-to relational database for solid schemas, complex queries, and data integrity in production apps.",
+      },
+    },
+    {
+      id: "sqlite",
+      icon: "skill-icons--sqlite.svg",
+      title: "SQLite",
+      tags: ["fullstack", "backend", "database"],
+      showMore: false,
+      value: {
+        fa: "SQLite یک دیتابیس سبک و فایل‌محور است؛ برای پروتوتایپ، ابزارهای محلی، تست و سناریوهایی که به دیتابیس embedded نیاز دارند مناسب است.",
+        en: "SQLite is a lightweight embedded database I use for prototypes, local tooling, tests, and small self-contained apps.",
+      },
+    },
+    {
+      id: "redis",
+      icon: "skill-icons--redis.svg",
+      title: "Redis",
+      tags: ["fullstack", "backend", "database"],
+      showMore: false,
+      value: {
+        fa: "Redis فروشگاه داده در حافظه است برای کش، session، rate limit و پشتیبانی از صف‌های کار. برای کاهش latency و مقیاس‌پذیری بک‌اند از آن استفاده می‌کنم.",
+        en: "Redis is an in-memory store I use for caching, sessions, rate limits, and backing job queues.",
+      },
+    },
+    {
+      id: "bullmq",
+      icon: "skill-icons--bullmq.svg",
+      title: "BullMQ",
+      tags: ["fullstack", "backend", "node"],
+      showMore: false,
+      value: {
+        fa: "BullMQ سیستم صف کار مبتنی بر Redis برای Node.js است. برای پردازش پس‌زمینه، جاب‌های زمان‌بندی‌شده و workloadهای غیرهمزمان از آن استفاده می‌کنم.",
+        en: "BullMQ is a Redis-backed job queue for Node.js — background work, scheduled jobs, and async workloads.",
+      },
+    },
+    {
+      id: "linux",
+      icon: "skill-icons--linux.svg",
+      title: "Linux",
+      tags: ["fullstack", "devops", "backend"],
+      showMore: false,
+      value: {
+        fa: "با محیط‌های لینوکسی برای مدیریت سرور، اسکریپت‌نویسی، عیب‌یابی سرویس‌ها و استقرار اپلیکیشن‌های وب کار می‌کنم.",
+        en: "I work comfortably in Linux environments for servers, scripting, troubleshooting, and deploying web apps.",
+      },
+    },
+    {
+      id: "cicd",
+      icon: "skill-icons--githubactions.svg",
+      title: "CI/CD",
+      tags: ["fullstack", "devops"],
+      showMore: false,
+      value: {
+        fa: "مسیرهای CI/CD را برای تست خودکار، بیلد و استقرار طراحی می‌کنم تا تحویل کد سریع‌تر و قابل‌اعتمادتر باشد؛ معمولاً با GitHub Actions و مشابه آن.",
+        en: "I set up CI/CD pipelines for automated test, build, and deploy flows — typically with GitHub Actions and similar tooling.",
+      },
+    },
+    {
+      id: "docker",
+      icon: "skill-icons--docker.svg",
+      title: "Docker",
+      tags: ["fullstack", "devops", "backend"],
+      showMore: false,
+      value: {
+        fa: "با Docker محیط توسعه و استقرار را یکسان می‌کنم؛ کانتینرسازی سرویس‌ها، دیتابیس و ابزارهای جانبی برای اجرای قابل‌تکرار اپلیکیشن‌ها.",
+        en: "Docker keeps development and deployment consistent — containerizing apps, databases, and supporting services.",
       },
     },
     {
@@ -199,11 +325,11 @@
       featured: true,
       role: { fa: "بنیان‌گذار", en: "Founder" },
       period: { fa: "۱۴۰۴ — اکنون", en: "2025 — Present" },
-      tags: ["frontend", "vue", "nuxt", "typescript", "fullstack", "api"],
+      tags: ["frontend", "vue", "nuxt", "typescript", "fullstack", "api", "backend", "database", "node"],
       highlights: [
         { fa: "بنیان‌گذار timmi.ir؛ پلتفرم جستجو، مقایسه و رزرو آنلاین نوبت", en: "Founded timmi.ir, a platform to search, compare, and book appointments" },
         { fa: "محصول برای کسب‌وکارهای نوبت‌محور، با پروفایل عمومی و پنل مدیریت", en: "Product for appointment-based businesses, with public profiles and an owner dashboard" },
-        { fa: "معماری با Nuxt 4، Vue 3، Pinia، Postgres، SSR و PWA", en: "Architecture on Nuxt 4, Vue 3, Pinia, and Postgres, with SSR and PWA" },
+        { fa: "معماری فول‌استک با Nuxt 4، Vue 3، Node.js، PostgreSQL، SSR و PWA", en: "Full-stack architecture on Nuxt 4, Vue 3, Node.js, and PostgreSQL, with SSR and PWA" },
         { fa: "رزرو نوبت، پرداخت آنلاین، کیف پول، پیامک و سئو", en: "Booking, online payments, wallet, SMS, and SEO" },
       ],
     },
@@ -280,11 +406,11 @@
       company: "Freelance",
       role: "Full-stack Developer",
       period: { fa: "پروژه‌های مستقل", en: "Independent projects" },
-      tags: ["fullstack", "javascript", "typescript", "vue", "api", "backend"],
+      tags: ["fullstack", "javascript", "typescript", "vue", "api", "backend", "node", "database", "devops"],
       highlights: [
-        { fa: "پیاده‌سازی بخش‌های کلاینت و سرور", en: "Client and server implementation" },
-        { fa: "طراحی API و اتصال فرانت به بک‌اند", en: "API design and frontend–backend integration" },
-        { fa: "تحویل end-to-end پروژه‌های وب", en: "End-to-end web delivery" },
+        { fa: "پیاده‌سازی end-to-end با Vue/Nuxt، Node.js و Express", en: "End-to-end delivery with Vue/Nuxt, Node.js, and Express" },
+        { fa: "طراحی REST API، کار با PostgreSQL/SQLite، Redis و BullMQ", en: "REST API design with PostgreSQL/SQLite, Redis, and BullMQ" },
+        { fa: "استقرار با Docker، Linux و مسیرهای CI/CD", en: "Deployment with Docker, Linux, and CI/CD pipelines" },
       ],
     },
   ];
@@ -297,10 +423,10 @@
       logo: "assets/images/timmi-logo.svg",
       logoWide: true,
       summary: {
-        fa: "بنیان‌گذار timmi.ir؛ پلتفرم رزرو نوبت کسب‌وکارهای نوبت‌محور با Nuxt 4، Postgres، پرداخت آنلاین، کیف پول و پنل کسب‌وکار.",
-        en: "Founded timmi.ir, a Nuxt 4 booking platform for appointment-based businesses, with Postgres, online payments, a wallet, and a business dashboard.",
+        fa: "بنیان‌گذار timmi.ir؛ پلتفرم فول‌استک رزرو نوبت با Nuxt 4، Node.js، PostgreSQL، پرداخت آنلاین، کیف پول و پنل کسب‌وکار.",
+        en: "Founded timmi.ir, a full-stack Nuxt 4 booking platform with Node.js, PostgreSQL, online payments, a wallet, and a business dashboard.",
       },
-      tags: ["frontend", "vue", "nuxt", "typescript", "fullstack", "api"],
+      tags: ["frontend", "vue", "nuxt", "typescript", "fullstack", "api", "backend", "database", "node"],
     },
     {
       id: "paystar-project",
@@ -357,10 +483,10 @@
       id: "freelance-project",
       title: { fa: "پروژه‌های Full-stack مستقل", en: "Independent fullstack work" },
       summary: {
-        fa: "تحویل end-to-end شامل فرانت، API و اتصال بک‌اند برای مشتریان مختلف.",
-        en: "End-to-end delivery: frontend, API, and backend integration for various clients.",
+        fa: "تحویل end-to-end با فرانت، Node.js/Express، دیتابیس، Redis/BullMQ و استقرار Docker.",
+        en: "End-to-end delivery: frontend, Node.js/Express, databases, Redis/BullMQ, and Docker deployments.",
       },
-      tags: ["fullstack", "javascript", "typescript", "vue", "api", "backend"],
+      tags: ["fullstack", "javascript", "typescript", "vue", "api", "backend", "node", "database", "devops"],
     },
   ];
 
